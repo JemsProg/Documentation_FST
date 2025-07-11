@@ -102,7 +102,6 @@ class ShippingAddress(models.Model):
  - By default, DRF does not automatically check uniqueness for you in serializers.
  - Even though the database might reject duplicates, we want to show a nice validation error message before saving anything to the DB.
 
-So UniqueValidator checks it at the serializer level.
 ---
 
 # 📄 serializers.py
