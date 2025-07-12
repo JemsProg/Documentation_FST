@@ -94,6 +94,13 @@ class ShippingAddress(models.Model):
     def __str__(self):
         return f'{self.full_name} - {self.address}'
 ```
+## What is UniqueValidator?
+ - UniqueValidator is a built-in helper from Django REST Framework (DRF).
+ - It is used to check that a field’s value is unique in the database — meaning: no other record already has this value.
+
+## Why do we need it?
+ - By default, DRF does not automatically check uniqueness for you in serializers.
+ - Even though the database might reject duplicates, we want to show a nice validation error message before saving anything to the DB.
 
 ---
 
@@ -163,11 +170,11 @@ class CartItemSerializer(serializers.ModelSerializer):
 
 ```python
 from django.shortcuts import get_object_or_404
-from rest_framework.permissions import IsAuthenticated
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework.response import Response
 from rest_framework import status
 
+from rest_framework.permissions import IsAuthenticated
 from rest_framework_simplejwt.tokens import RefreshToken
 
 from .models import Product, CartUser
