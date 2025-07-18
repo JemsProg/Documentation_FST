@@ -37,6 +37,8 @@ python manage.py collectstatic --noinput
 ```bash
 pip install gunicorn
 python -m gunicorn backend.wsgi:application --bind 0.0.0.0:8003
+gunicorn backend.wsgi:application --bind 0.0.0.0:8003 --daemon
+
 ```
 
 > ✅ Replace `8003` with the port assigned to the student
