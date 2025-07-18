@@ -36,12 +36,12 @@ python manage.py collectstatic --noinput
 ### 🐍 2. Run Gunicorn on Custom Port
 ```bash
 pip install gunicorn
-python -m gunicorn backend.wsgi:application --bind 0.0.0.0:8003
-gunicorn backend.wsgi:application --bind 0.0.0.0:8003 --daemon
+python -m gunicorn backend.wsgi:application --bind 0.0.0.0:800/
+gunicorn backend.wsgi:application --bind 0.0.0.0:800/ --daemon
 
 ```
 
-> ✅ Replace `8003` with the port assigned to the student
+> ✅ Replace `/` with the port assigned to the student
 
 ---
 
