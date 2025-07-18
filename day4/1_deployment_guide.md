@@ -43,6 +43,14 @@ gunicorn backend.wsgi:application --bind 0.0.0.0:800/ --daemon
 
 > ✅ Replace `/` with the port assigned to the student
 
+### 🐍 if you made some changes in backend
+```bash
+pkill gunicorn
+gunicorn backend.wsgi:application --bind 0.0.0.0:8004 --daemon
+
+
+```
+
 ---
 
 ### ⚛ 3. Frontend Setup (React + Vite)
