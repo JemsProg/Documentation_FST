@@ -35,6 +35,7 @@ python manage.py collectstatic --noinput
 
 ### 🐍 2. Run Gunicorn on Custom Port
 ```bash
+pip install gunicorn
 python -m gunicorn backend.wsgi:application --bind 0.0.0.0:8003
 ```
 
