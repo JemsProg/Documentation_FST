@@ -236,7 +236,7 @@ Use curl instead:
 
 ```bash
 curl -X POST https://api.paymongo.com/v1/webhooks \
-  -u sk_test_xxx: \
+  -u (put your secret key here): \
   -H "Content-Type: application/json" \
   -d '{
     "data": {
