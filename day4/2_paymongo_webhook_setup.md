@@ -236,7 +236,7 @@ Use curl instead:
 
 ```bash
 curl -X POST https://api.paymongo.com/v1/webhooks \
-  -u (put your secret key here): \
+  -u sk_test_your_secret_key: \
   -H "Content-Type: application/json" \
   -d '{
     "data": {
@@ -246,6 +246,7 @@ curl -X POST https://api.paymongo.com/v1/webhooks \
       }
     }
   }'
+
 ```
 
 > If you see `resource_exists`, your webhook is already active.
