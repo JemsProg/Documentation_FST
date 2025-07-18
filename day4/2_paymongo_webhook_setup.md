@@ -103,7 +103,7 @@ def create_gcash_payment(request):
         user = request.user
 
         # Base64 encode your secret key
-        secret_key = "sk_test_6Wu2UUWNZkq1KqyjxjFNEzvZ"
+        secret_key = "{insert your secret key here from paymongo}"
         encoded_key = base64.b64encode(f"{secret_key}:".encode()).decode()
 
         headers = {
@@ -311,4 +311,3 @@ gunicorn backend.wsgi:application --bind 0.0.0.0:8003 --access-logfile gunicorn.
 - Even with `gcash`, user will see multiple payment methods on the checkout page.
 
 You’re done! 🎉
-
