@@ -45,8 +45,8 @@ gunicorn backend.wsgi:application --bind 0.0.0.0:800/ --daemon
 
 ### 🐍 if you made some changes in backend
 ```bash
-pkill gunicorn
-gunicorn backend.wsgi:application --bind 0.0.0.0:8004 --daemon
+sudo kill -9 $(lsof -t -i:8001)
+gunicorn backend.wsgi:application --bind 0.0.0.0:8001 --daemon
 
 
 ```
